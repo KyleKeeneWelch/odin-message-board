@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Message</title>
+</head>
+
+<body>
+    <h1>New Message</h1>
+    <p>
+        <%= locals.error %>
+    </p>
+    <form method="POST" action="/new">
+        <div>
+            <label for="author">Author</label>
+            <br>
+            <input type="text" name="author" required placeholder="Enter Author's name..." value="<%= locals.author %>">
+        </div>
+        <div>
+            <label for="messageText">Message Text</label>
+            <br>
+            <textarea name="messageText" required placeholder="Enter text..."><%= locals.messageText %></textarea>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/">View messages</a>
+</body>
+
+</html>
